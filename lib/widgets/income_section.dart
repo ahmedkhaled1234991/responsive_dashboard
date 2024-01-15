@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/custom_background_container.dart';
-import 'income_chart.dart';
-import 'income_details.dart';
+import 'income_section_body.dart';
 import 'income_section_header.dart';
 
 class IncomeSection extends StatelessWidget {
@@ -11,31 +10,14 @@ class IncomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomBackgroundContainer(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            IncomeSectionHeader(),
-            SizedBox(
-              height: 16,
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded(
-                  flex: 6,
-                  child: IncomeChart(),
-                ),
-                SizedBox(
-                  width: 16,
-                ),
-                Expanded(
-                  flex: 7,
-                  child: IncomeDetails(),
-                ),
-              ],
-            ),
-          ],
-        ),
+      child: Column(
+        children: [
+          IncomeSectionHeader(),
+          SizedBox(
+            height: 16,
+          ),
+          IncomeSectionBody(),
+        ],
       ),
     );
   }

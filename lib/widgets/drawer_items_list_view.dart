@@ -43,7 +43,7 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
       itemCount: items.length,
       itemBuilder: (context, index) {
         return Padding(
-          padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+          padding: const EdgeInsets.only(top: 20, left: 8, right: 8),
           child: DrawerItem(
             drawerItemModel: items[index],
             isActive: activeIndex == index,

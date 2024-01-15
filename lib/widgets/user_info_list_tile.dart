@@ -24,13 +24,13 @@ class UserInfoListTile extends StatelessWidget {
           ),
           title: Text(
             userInfoModel.title,
-            style: AppStyles.styleSemiBold16.copyWith(
+            style: AppStyles.styleSemiBold16(context).copyWith(
               color: const Color(0xFF064061),
             ),
           ),
           subtitle: Text(
             userInfoModel.subtitle,
-            style: AppStyles.styleRegular12,
+            style: AppStyles.styleRegular12(context),
           ),
         ),
       ),

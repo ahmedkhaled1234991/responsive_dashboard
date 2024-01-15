@@ -27,7 +27,7 @@ class InActiveDrawerItem extends StatelessWidget {
         ),
         title: Text(
           drawerItemModel.title,
-          style: AppStyles.styleMedium16,
+          style: AppStyles.styleMedium16(context),
         ),
         onTap: () => onTap(),
       ),
@@ -56,7 +56,7 @@ class ActiveDrawerItem extends StatelessWidget {
         ),
         title: Text(
           drawerItemModel.title,
-          style: AppStyles.styleSemiBold16,
+          style: AppStyles.styleSemiBold16(context),
         ),
         trailing: Padding(
           padding: const EdgeInsets.symmetric(vertical: 4),

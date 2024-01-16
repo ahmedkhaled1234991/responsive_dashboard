@@ -12,59 +12,61 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.7,
-      color: Colors.white,
-      child: CustomScrollView(
-        slivers: [
-          const SliverToBoxAdapter(
-            child: UserInfoListTile(
-              userInfoModel: UserInfoModel(
-                image: Assets.imagesAvatar1,
-                title: 'Lekan Okeowo',
-                subtitle: 'demo@gmail.com',
+    return SafeArea(
+      child: Container(
+        width: MediaQuery.of(context).size.width * 0.7,
+        color: Colors.white,
+        child: CustomScrollView(
+          slivers: [
+            const SliverToBoxAdapter(
+              child: UserInfoListTile(
+                userInfoModel: UserInfoModel(
+                  image: Assets.imagesAvatar1,
+                  title: 'Lekan Okeowo',
+                  subtitle: 'demo@gmail.com',
+                ),
               ),
             ),
-          ),
-          const SliverToBoxAdapter(
-            child: SizedBox(
-              height: 8,
-            ),
-          ),
-          const DrawerItemsListView(),
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Column(
-                children: [
-                  const Expanded(
-                    child: SizedBox(
-                      height: 20,
-                    ),
-                  ),
-                  InActiveDrawerItem(
-                    drawerItemModel: const DrawerItemModel(
-                      title: 'Setting system',
-                      image: Assets.imagesSettingSystem,
-                    ),
-                    onTap: () {},
-                  ),
-                  InActiveDrawerItem(
-                    drawerItemModel: const DrawerItemModel(
-                      title: 'Logout account',
-                      image: Assets.imagesLogoutAccount,
-                    ),
-                    onTap: () {},
-                  ),
-                  const SizedBox(
-                    height: 48,
-                  ),
-                ],
+            const SliverToBoxAdapter(
+              child: SizedBox(
+                height: 8,
               ),
             ),
-          ),
-        ],
+            const DrawerItemsListView(),
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: Column(
+                  children: [
+                    const Expanded(
+                      child: SizedBox(
+                        height: 20,
+                      ),
+                    ),
+                    InActiveDrawerItem(
+                      drawerItemModel: const DrawerItemModel(
+                        title: 'Setting system',
+                        image: Assets.imagesSettingSystem,
+                      ),
+                      onTap: () {},
+                    ),
+                    InActiveDrawerItem(
+                      drawerItemModel: const DrawerItemModel(
+                        title: 'Logout account',
+                        image: Assets.imagesLogoutAccount,
+                      ),
+                      onTap: () {},
+                    ),
+                    const SizedBox(
+                      height: 48,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

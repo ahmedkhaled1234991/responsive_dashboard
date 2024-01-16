@@ -30,6 +30,7 @@ class CustomButton extends StatelessWidget {
           style: AppStyles.styleSemiBold18(context).copyWith(
             color: textColor,
           ),
+          textAlign: TextAlign.center,
         ),
       ),
     );

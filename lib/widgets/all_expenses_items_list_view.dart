@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/all_expenses_item_model.dart';
 import '../utils/app_images.dart';
+import '../utils/size_config.dart';
 import 'all_expenses_item.dart';
 
 class AllExpensesItemsListView extends StatefulWidget {
@@ -37,6 +38,7 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Row(
       children: items.asMap().entries.map((e) {
         int index = e.key;
@@ -48,10 +50,13 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
             },
             child: Padding(
               padding: index == 1
-                  ? const EdgeInsets.symmetric(horizontal: 4)
+                  ? EdgeInsets.symmetric(
+                      horizontal: width < SizeConfig.tablet ? 2 : 4)
                   : index == 0
-                      ? const EdgeInsets.only(right: 8)
-                      : const EdgeInsets.only(left: 8),
+                      ? EdgeInsets.only(
+                          right: width < SizeConfig.tablet ? 4 : 8)
+                      : EdgeInsets.only(
+                          left: width < SizeConfig.tablet ? 4 : 8),
               child: AllExpensesItem(
                 isSelected: selectedIndex == index,
                 itemModel: item,

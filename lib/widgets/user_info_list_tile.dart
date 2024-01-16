@@ -22,15 +22,23 @@ class UserInfoListTile extends StatelessWidget {
           leading: SvgPicture.asset(
             userInfoModel.image,
           ),
-          title: Text(
-            userInfoModel.title,
-            style: AppStyles.styleSemiBold16(context).copyWith(
-              color: const Color(0xFF064061),
+          title: FittedBox(
+            alignment: AlignmentDirectional.centerStart,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              userInfoModel.title,
+              style: AppStyles.styleSemiBold16(context).copyWith(
+                color: const Color(0xFF064061),
+              ),
             ),
           ),
-          subtitle: Text(
-            userInfoModel.subtitle,
-            style: AppStyles.styleRegular12(context),
+          subtitle: FittedBox(
+            alignment: AlignmentDirectional.centerStart,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              userInfoModel.subtitle,
+              style: AppStyles.styleRegular12(context),
+            ),
           ),
         ),
       ),

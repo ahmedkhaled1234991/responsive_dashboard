@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../utils/size_config.dart';
 import 'all_expenses.dart';
 import 'quick_invoice.dart';
 
@@ -11,7 +12,8 @@ class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: MediaQuery.sizeOf(context).width < 800 ? 24 : 40,
+          height:
+              MediaQuery.sizeOf(context).width < SizeConfig.desktop ? 24 : 40,
         ),
         const AllExpenses(),
         const SizedBox(

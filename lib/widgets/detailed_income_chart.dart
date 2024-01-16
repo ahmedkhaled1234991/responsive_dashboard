@@ -43,7 +43,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           color: const Color(0xFF208BC7),
         ),
         PieChartSectionData(
-          titlePositionPercentageOffset: activeIndex == 1 ? 2.2 : null,
+          titlePositionPercentageOffset: activeIndex == 1 ? 2.0 : null,
           title: activeIndex == 1 ? 'Design product' : '25%',
           value: 25,
           titleStyle: AppStyles.styleMedium16(context).copyWith(

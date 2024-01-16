@@ -6,7 +6,7 @@ import 'views/dashboard_view.dart';
 void main() {
   runApp(
     DevicePreview(
-      enabled: false,
+      enabled: true,
       builder: (context) => const ResponsiveDashboard(),
     ),
   );
